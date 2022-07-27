@@ -4,4 +4,13 @@
 
 <h1>Homepage</h1>
 
+<div>
+    {% for room in rooms %}
+        <span>@{{room.host}}</span>
+        <a href="{% url 'room' room.id %}">
+            <h4>{{room.name}}</h4>
+        </a>
+    {% endfor %}
+</div>
+
 {% endblock %}
